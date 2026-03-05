@@ -1,6 +1,7 @@
 import { Button } from "@/components/Button";
 import { Menu } from "lucide-react";
 import { useState } from "react";
+import { X } from "lucide-react";
 const navlinks = [
   { href: "#about", name: "Acerca de Mi" },
   { href: "#projects", name: "Proyectos" },
@@ -38,9 +39,12 @@ export const Navbar = () => {
                 </div>
 
                 {/* Mobile Menu Button */}
-                <button className="md:hidden p-2 text-foreground" onClick={()=> setIsMobileMenuOpen((prev) => !prev )}>
-                        {isMobileMenuOpen ? <x /> :<Menu size={24} />}
-                </button>
+               <button
+          className="md:hidden p-2 text-foreground"
+          onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+        >
+          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
             </nav>
             
             {/* Mobile Menu */}
