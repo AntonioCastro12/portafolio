@@ -1,7 +1,7 @@
 import { Button } from "@/components/Button";
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { X } from "lucide-react";
+
 const navlinks = [
   { href: "#about", name: "Acerca de Mi" },
   { href: "#projects", name: "Proyectos" },
@@ -40,7 +40,7 @@ export const Navbar = () => {
 
                 {/* Mobile Menu Button */}
                <button
-          className="md:hidden p-2 text-foreground"
+          className="md:hidden p-2 text-foreground cursor-pointr"
           onClick={() => setIsMobileMenuOpen((prev) => !prev)}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -48,21 +48,23 @@ export const Navbar = () => {
             </nav>
             
             {/* Mobile Menu */}
-        { isMobileMenuOpen && (
-             <div className="md:hidden glass-strong">
-                <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
-                {navlinks.map((link, index) => (
-                            <a key={link.href} 
-                            href={link.href} 
-                            className="text-lg text-muted-foreground hover:text-foreground py-2">
-                                {link.name}
-                            </a>
-                        ))}    
+       {isMobileMenuOpen && (
+  <div className="md:hidden glass-strong animate-fade-in">
+    <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
+      {navlinks.map((link) => (
+        <a
+          key={link.href}
+          href={link.href}
+          className="text-lg text-muted-foreground hover:text-foreground py-2"
+        >
+          {link.name}
+        </a>
+      ))}
 
-                        <Button size="sm">Contacto</Button>
-                </div>        
-            </div>           
-        )}
+      <Button size="sm">Contacto</Button>
+    </div>
+  </div>
+)}
         </header>
     );
 };
