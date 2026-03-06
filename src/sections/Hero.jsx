@@ -1,3 +1,7 @@
+import { ArrowRight, Download } from "lucide-react";
+import { Button } from "../components/Button";
+import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
+
 export const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
@@ -44,7 +48,7 @@ export const Hero = () => {
 
             {/* Headline */}
             <div className="space-y-4">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-inv animate-fade-in animation-delay-100">
                 Desarrollador{" "}
                 <span className="text-primary glow-text">digital</span>
                 <br />
@@ -54,13 +58,24 @@ export const Hero = () => {
                   precisión
                 </span>
               </h1>
-              <p className="text-lg text-muted-foreground max-w-lg animate-fade-in">
+              <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animate-delay-200">
                 Soy un ingeniero de software especializado en React, con una
                 sólida experiencia en el desarrollo de aplicaciones web modernas
                 y escalables. Mi pasión por la tecnología y mi compromiso con la
                 excelencia me han llevado a crear soluciones innovadoras que
                 impulsan el éxito de los proyectos en los que participo.
               </p>
+            </div>
+
+            {/* CTs */}
+            <div>
+                <Button size="lg">
+                    Contactame <ArrowRight className="w-5 h-5" />
+                </Button>
+                <AnimatedBorderButton>
+                <Download className="w-5 h-5" />
+                Download CV
+              </AnimatedBorderButton>
             </div>
           </div>
         </div>
