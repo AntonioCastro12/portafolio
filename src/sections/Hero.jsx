@@ -2,6 +2,30 @@ import { ArrowRight, Download, Facebook, Github, Linkedin } from "lucide-react";
 import { Button } from "../components/Button";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
 
+const skills = [
+  "React",
+  "Next.js",
+  "TypeScript",
+  "Node.js",
+  "GraphQL",
+  "PostgreSQL",
+  "MongoDB",
+  "Angular",
+  "C##",
+  "Nest.js",
+  "Docker",
+  "AWS",
+  "Tailwind CSS",
+  "n8n",
+  "SQL server",
+  "React Native",
+  "JavaScript",
+  "Git",
+  "GitHub Actions",
+];
+
+
+
 export const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
@@ -96,8 +120,8 @@ export const Hero = () => {
               ))}
             </div>
           </div>
-          {/* right Column - Profile Image */}
-              <div className="relatice animate-fade-in animation-delay-300">
+  {/* Right Column - Profile Image */}
+          <div className="relatice animate-fade-in animation-delay-300">
             {/* Profile Image */}
             <div className="relative max-w-md mx-auto">
               <div
@@ -113,18 +137,53 @@ export const Hero = () => {
                   className="w-full aspect-[4/5] object-cover rounded-2xl"
                 />
 
-                {/* Floating Badge*/}
+                {/* Floating Badge */}
                 <div className="absolute -bottom-4 -right-4 glass rounded-xl px-4 py-3 animate-float">
-                  <div>
-                    <div/>
-                    <span>Available for work</span>
+                  <div className="flex items-center gap-3">
+                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
+                    <span className="text-sm font-medium">
+                      Listo para trabajar
+                    </span>
                   </div>
                 </div>
-              </div>
+                {/* Stats Badge */}
+                <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
+                  <div className="text-2xl font-bold text-primary">5+</div>
+                  <div className="text-xs text-muted-foreground">
+                    Años de experiencia.
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
+
+        {/* Skills Section */}
+        <div className="mt-20 animate-fade-in animation-delay-600">
+          <p className="text-sm text-muted-foreground mb-6 text-center">
+            Tecnologias que trabajo 
+          </p>
+          <div className="relative overflow-hidden">
+            <div
+              className="absolute left-0 top-0 bottom-0 w-32
+             bg-gradient-to-r from-background to-transparent z-10"
+            />
+            <div
+              className="absolute right-0 top-0 bottom-0 w-32
+             bg-gradient-to-l from-background to-transparent z-10"
+            />
+            <div className="flex animate-marquee">
+              {[...skills, ...skills].map((skill, idx) => (
+                <div key={idx} className="flex-shrink-0 px-8 py-4">
+                  <span className="text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground transition-colors">
+                    {skill}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
