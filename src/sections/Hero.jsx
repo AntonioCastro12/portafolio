@@ -7,11 +7,11 @@ export const Hero = () => {
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Bg */}
       <div className="absolute inset-0">
-       <img
-  src="/hero-bg.jpg"
-  alt="Hero image"
-  className="w-full h-full object-cover opacity-40"
-/>
+        <img
+          src="/hero-bg.jpg"
+          alt="Hero image"
+          className="w-full h-full object-cover opacity-40"
+        />
 
         <div className="absolute inset-0 bg-gradiente-to-b from-background/20 via-background/80 to-background"></div>
       </div>
@@ -69,10 +69,10 @@ export const Hero = () => {
 
             {/* CTs */}
             <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
-                <Button size="lg">
-                    Contactame <ArrowRight className="w-5 h-5" />
-                </Button>
-                <AnimatedBorderButton>
+              <Button size="lg">
+                Contactame <ArrowRight className="w-5 h-5" />
+              </Button>
+              <AnimatedBorderButton>
                 <Download className="w-5 h-5" />
                 Download CV
               </AnimatedBorderButton>
@@ -80,18 +80,51 @@ export const Hero = () => {
 
             {/* Social links */}
             <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
-                <span className="text-sm text-muted-foreground">Sigueme:</span>
-                {[{icon: Github, href: "#"},
-                  {icon: Linkedin, href: "#"},
-                  {icon: Facebook, href: "#"}
-                ].map((social,idx)=>(
-                    <a key={idx} href={social.href} className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300">
-                    {<social.icon className="w-5 h-5"/>}</a>
-                ))}
+              <span className="text-sm text-muted-foreground">Sigueme:</span>
+              {[
+                { icon: Github, href: "#" },
+                { icon: Linkedin, href: "#" },
+                { icon: Facebook, href: "#" },
+              ].map((social, idx) => (
+                <a
+                  key={idx}
+                  href={social.href}
+                  className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300"
+                >
+                  {<social.icon className="w-5 h-5" />}
+                </a>
+              ))}
+            </div>
+          </div>
+          {/* right Column - Profile Image */}
+              <div className="relatice animate-fade-in animation-delay-300">
+            {/* Profile Image */}
+            <div className="relative max-w-md mx-auto">
+              <div
+                className="absolute inset-0 
+              rounded-3xl bg-gradient-to-br 
+              from-primary/30 via-transparent 
+              to-primary/10 blur-2xl animate-pulse"
+              />
+              <div className="relative glass rounded-3xl p-2 glow-border">
+                <img
+                  src="/public/perfil.jpeg"
+                  alt="Antonio Castro"
+                  className="w-full aspect-[4/5] object-cover rounded-2xl"
+                />
+
+                {/* Floating Badge*/}
+                <div className="absolute -bottom-4 -right-4 glass rounded-xl px-4 py-3 animate-float">
+                  <div>
+                    <div/>
+                    <span>Available for work</span>
+                  </div>
+                </div>
+              </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
     </section>
   );
 };
