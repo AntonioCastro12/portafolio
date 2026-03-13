@@ -31,19 +31,76 @@ const highlights = [
 export const About = () => {
   return (
     <section id="about" className="py-32 relative overflow-hidden">
-      <div>
-        <div>
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/*left column */}
-          <div>
-            <span>Acerca de Mì</span>
+          <div className="space-y-8">
+            <div className="animate-fade-in">
+              <span className="text-secondary-foreground text-sm font-medium tacking-wider uppercase">
+                Acerca de Mì
+              </span>
+            </div>
           </div>
-        </div>
 
-        <div>
-          <h2>
-            Construyendo el futuro,
-            <span>un componente a la vez.</span>
-          </h2>
+          <div>
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
+              Construyendo el futuro,
+              <span className="font-serif italic font-normal text-white">
+                {" "}
+                un componente a la vez.
+              </span>{" "}
+            </h2>
+
+            <div className="space-y-4 text-muted-foreground animate-fade-in animation-daley-200">
+              <p>
+                Soy un Ingeniero de Software apasionado por el desarrollo de
+                soluciones digitales escalables y de alto impacto. Cuento con
+                más de 5 años de experiencia en desarrollo web, participando en
+                la creación de aplicaciones modernas que combinan rendimiento,
+                diseño y una excelente experiencia de usuario.
+              </p>
+
+              <p>
+                A lo largo de mi trayectoria he trabajado en el desarrollo de
+                aplicaciones web y sistemas empresariales, utilizando
+                tecnologías modernas tanto en frontend como en backend. Me
+                especializo en React, Angular, TypeScript y TailwindCSS para la
+                construcción de interfaces dinámicas, y en .NET, C# y MySQL para
+                el desarrollo de APIs robustas y arquitecturas backend
+                escalables.
+              </p>
+
+              <p>
+                He participado en proyectos que van desde plataformas web
+                interactivas y sistemas administrativos, hasta aplicaciones para
+                manejo de datos y automatización de procesos, aplicando buenas
+                prácticas de desarrollo, patrones de arquitectura y control de
+                versiones.
+              </p>
+
+              <p>
+                Mi enfoque combina excelencia técnica, diseño centrado en el
+                usuario y desarrollo limpio y mantenible, permitiéndome
+                construir productos digitales confiables y preparados para
+                crecer.
+              </p>
+
+              <p>
+                Cuando no estoy programando, me gusta explorar nuevas
+                tecnologías, mejorar mis habilidades en arquitectura de software
+                y compartir conocimientos con la comunidad de desarrolladores.
+              </p>
+            </div>
+            <br />
+            <br />
+            <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300">
+                <p className="text-lg font-medium italic text-foreground">
+                    "Mi misión es crear experiencias digitales que no solo sean
+funcionales, sino verdaderamente encantadoras - productos que a los usuarios les encante
+usar y a los desarrolladores les encante mantener."
+                </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
