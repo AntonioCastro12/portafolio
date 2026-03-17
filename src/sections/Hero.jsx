@@ -110,9 +110,9 @@ export const Hero = () => {
             <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
               <span className="text-sm text-muted-foreground">Sigueme:</span>
               {[
-                { icon: Github, href: "#" },
-                { icon: Linkedin, href: "#" },
-                { icon: Facebook, href: "#" },
+                { icon: Github,  href: "https://github.com/", target: "_blank", rel: "noopener noreferrer" },
+                { icon: Linkedin, href: "https://www.linkedin.com/in/antoniojcc/", target: "_blank", real: "noopener noreferrer" },
+                { icon: Facebook, href: "https://www.facebook.com/EntagledWebDesign", target: "_blank", real: "noopener noreferrer" },
               ].map((social, idx) => (
                 <a
                   key={idx}

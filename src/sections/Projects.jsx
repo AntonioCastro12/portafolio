@@ -1,3 +1,42 @@
+const projects = [
+    {
+        title: "Panel de tecnología financiera",
+        description: "Una plataforma integral de análisis financiero con visualización de datos en tiempo real, gestión de cartera e información basada en inteligencia artificial.",
+        image: "/projects/project4.png",
+        tags: ["React", "TypeScript", "NodeJS"],
+        link:"#",
+        github:"#"        
+    },
+     {
+    title: "E-Commerce Platform",
+    description:
+      "A full-featured e-commerce solution with inventory management, payment processing, and analytics dashboard.",
+    image: "/projects/project2.png",
+    tags: ["Next.js", "Stripe", "PostgreSQL", "Tailwind"],
+    link: "#",
+    github: "#",
+  },
+  {
+    title: "AI Writing Assistant",
+    description:
+      "An intelligent writing tool powered by GPT-4, helping users create better content faster.",
+    image: "/projects/project3.png",
+    tags: ["React", "OpenAI", "Python", "FastAPI"],
+    link: "#",
+    github: "#",
+  },
+  {
+    title: "Project Management Tool",
+    description:
+      "A collaborative workspace for teams with real-time updates, task tracking, and integrations.",
+    image: "/projects/project4.png",
+    tags: ["Next.js", "Socket.io", "MongoDB", "Redis"],
+    link: "#",
+    github: "#",
+  },
+]
+
+
 export const Projects = () => {
     return <section></section>
 };
