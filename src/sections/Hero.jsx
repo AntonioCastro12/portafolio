@@ -112,7 +112,7 @@ export const Hero = () => {
               {[
                 { icon: Github,  href: "https://github.com/", target: "_blank", rel: "noopener noreferrer" },
                 { icon: Linkedin, href: "https://www.linkedin.com/in/antoniojcc/", target: "_blank", real: "noopener noreferrer" },
-                { icon: Facebook, href: "https://www.facebook.com/EntagledWebDesign", target: "_blank", real: "noopener noreferrer" },
+                { icon: Facebook, href: "https://www.facebook.com/RCMCodeDev", target: "_blank", real: "noopener noreferrer" },
               ].map((social, idx) => (
                 <a
                   key={idx}
