@@ -3,7 +3,7 @@ const projects = [
     title: "Panel de tecnología financiera",
     description:
       "Una plataforma integral de análisis financiero con visualización de datos en tiempo real, gestión de cartera e información basada en inteligencia artificial.",
-    image: "/projects/project4.png",
+    image: "/projects/project1.png",
     tags: ["React", "TypeScript", "NodeJS"],
     link: "#",
     github: "#",
@@ -49,10 +49,38 @@ export const Projects = () => {
           <span className="text-secondary-foreground text-sm font-medium tracking-winder uppercase animate-fade-in">
             Trabajo Destacado
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100">
+          <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
             proyectos que
-            <span> Impactaron.</span>
+            <span className="font-serif italic font-normal text-white">
+                {" "}              
+               Impactaron.
+            </span>
           </h2>
+          <p className="text-muted-foreground animate-fade-in animation-delay-200">
+            Una selección de mis trabajos recientes, desde complejas aplicaciones web hasta herramientas innovadoras que resuelven problemas del mundo real.
+          </p>
+        </div>
+
+        {/*projects Grid*/}
+        <div className="grid md:grid-cols-2 gap-8">
+          {projects.map((projects, idx) =>(
+            <div key={idx} 
+            className="group glass rounded-2xl overflow-hidden animate-fade-in md:row-span-1"
+            style={{animationDelay: `${(idx + 1) * 100}ms`}}
+            >
+              {/*image*/}
+              <div className="relative overflow-hidden aspect-video">
+                <img 
+                  src={projects.image} 
+                  alt={projects.title} 
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent opacity-60">
+
+                  </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
