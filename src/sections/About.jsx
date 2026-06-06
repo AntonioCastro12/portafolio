@@ -1,29 +1,25 @@
-import { Code2, Rocket, Users, Lightbulb } from "lucide-react";
+﻿import { Code2, Rocket, Users, Lightbulb } from "lucide-react";
 
 const highlights = [
   {
     icon: Code2,
     title: "Código limpio y mantenible",
-    description:
-      "Me esfuerzo por escribir código que sea fácil de entender y mantener, siguiendo las mejores prácticas y principios de diseño.",
+    description: "Construyo sistemas ordenados, escalables y fáciles de actualizar para que tu inversión siga funcionando con el tiempo.",
   },
   {
     icon: Rocket,
-    title: "Rendimiento optimizado",
-    description:
-      "Me aseguro de que mis aplicaciones sean rápidas y eficientes, optimizando el rendimiento y la experiencia del usuario.",
+    title: "Sitios rápidos y responsivos",
+    description: "Optimizo cada interfaz para cargar bien, verse profesional en celular y convertir visitas en clientes.",
   },
   {
     icon: Users,
-    title: "Colaboración efectiva",
-    description:
-      "Trabajo bien en equipo, comunicándome de manera clara y colaborando para lograr los mejores resultados en cada proyecto.",
+    title: "Comunicación clara",
+    description: "Trabajo contigo paso a paso, explicando avances y tomando decisiones con enfoque de negocio.",
   },
   {
     icon: Lightbulb,
-    title: "Soluciones innovadoras",
-    description:
-      "Siempre busco formas creativas de resolver problemas y mejorar las aplicaciones, aportando ideas frescas y efectivas.",
+    title: "Soluciones a tu medida",
+    description: "No vendo plantillas genéricas: propongo herramientas alineadas a tu operación, tu mercado y tus metas.",
   },
 ];
 
@@ -32,94 +28,53 @@ export const About = () => {
     <section id="about" className="py-32 relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          
-          {/* Left Column */}
           <div className="space-y-8">
             <div className="animate-fade-in">
-              <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase">
-                Acerca de mí
-              </span>
+              <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase">Acerca de mí</span>
             </div>
 
             <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
-              Construyendo el futuro,
-              <span className="font-serif italic font-normal text-white">
-                {" "}un componente a la vez.
-              </span>
+              Código que transforma ideas
+              <span className="font-serif italic font-normal text-white"> en soluciones reales.</span>
             </h2>
 
             <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
               <p>
-                Soy un Ingeniero de Software apasionado por el desarrollo de
-                soluciones digitales escalables y de alto impacto. Cuento con
-                más de 5 años de experiencia en desarrollo web, participando en
-                la creación de aplicaciones modernas que combinan rendimiento,
-                diseño y una excelente experiencia de usuario.
+                Soy Antonio Castro, ingeniero de software y fundador de RCM CodeDev. Ayudo a negocios, emprendedores y equipos en México a crear presencia digital, automatizar procesos y desarrollar sistemas que sí se adaptan a su forma de trabajar.
               </p>
-
               <p>
-                A lo largo de mi trayectoria he trabajado en el desarrollo de
-                aplicaciones web y sistemas empresariales, utilizando
-                tecnologías modernas tanto en frontend como en backend. Me
-                especializo en React, Angular, TypeScript y TailwindCSS para la
-                construcción de interfaces dinámicas, y en .NET, C# y MySQL para
-                el desarrollo de APIs robustas y arquitecturas backend
-                escalables.
+                Tengo más de 5 años de experiencia desarrollando aplicaciones web, paneles administrativos, APIs, sistemas empresariales y herramientas internas con React, Angular, TypeScript, C#, .NET, Node.js, SQL Server y Tailwind CSS.
               </p>
-
               <p>
-                He participado en proyectos que van desde plataformas web
-                interactivas y sistemas administrativos, hasta aplicaciones para
-                manejo de datos y automatización de procesos, aplicando buenas
-                prácticas de desarrollo, patrones de arquitectura y control de
-                versiones.
+                Mi enfoque combina diseño moderno, arquitectura sólida y una comunicación cercana. Busco que cada proyecto sea útil desde el primer día: fácil de usar, fácil de mantener y preparado para crecer.
               </p>
-
               <p>
-                Mi enfoque combina excelencia técnica, diseño centrado en el
-                usuario y desarrollo limpio y mantenible, permitiéndome
-                construir productos digitales confiables y preparados para
-                crecer.
-              </p>
-
-              <p>
-                Cuando no estoy programando, me gusta explorar nuevas
-                tecnologías, mejorar mis habilidades en arquitectura de software
-                y compartir conocimientos con la comunidad de desarrolladores.
+                También desarrollo automatizaciones con herramientas como n8n para reducir tareas repetitivas, conectar servicios y ahorrar tiempo operativo en ventas, atención, reportes o seguimiento de clientes.
               </p>
             </div>
 
             <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300">
               <p className="text-lg font-medium italic text-foreground">
-                "Mi misión es crear experiencias digitales que no solo sean
-                funcionales, sino verdaderamente encantadoras — productos que
-                los usuarios disfruten usar y que los desarrolladores disfruten
-                mantener."
+                "Mi misión es crear soluciones digitales rápidas, modernas y eficientes que ayuden a los negocios a vender mejor, operar con más orden y verse profesionales en línea."
               </p>
             </div>
           </div>
 
-          {/* Right Column - Highlights */}
           <div className="grid sm:grid-cols-2 gap-6">
             {highlights.map((item, idx) => (
               <div
-                key={idx}
+                key={item.title}
                 className="glass p-6 rounded-2xl animate-fade-in hover:scale-105 transition-all duration-300"
                 style={{ animationDelay: `${(idx + 1) * 100}ms` }}
               >
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 hover:bg-primary/20">
                   <item.icon className="w-6 h-6 text-primary" />
                 </div>
-
                 <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-
-                <p className="text-sm text-muted-foreground">
-                  {item.description}
-                </p>
+                <p className="text-sm text-muted-foreground">{item.description}</p>
               </div>
             ))}
           </div>
-
         </div>
       </div>
     </section>
