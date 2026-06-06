@@ -5,14 +5,14 @@ const contactLinks = [
   {
     icon: MessageCircle,
     title: "WhatsApp",
-    value: "Agrega tu número para activar este enlace",
-    href: "#contact",
+    value: "4624921594",
+    href: "https://wa.me/4624921594",
   },
   {
     icon: Mail,
     title: "Correo",
-    value: "Agrega tu correo profesional",
-    href: "#contact",
+    value: "antoniojcc786@gmail.com",
+    href: "mailto:antoniojcc786@gmail.com",
   },
   {
     icon: Facebook,
@@ -84,7 +84,7 @@ export const Contact = () => {
                 <Phone className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <h3 className="font-semibold text-foreground">Atención en México</h3>
+                <h3 className="font-semibold text-foreground">Atención en Personalizada</h3>
                 <p className="text-sm text-muted-foreground">Proyectos remotos, seguimiento por llamada y entregas por etapas.</p>
               </div>
             </div>
