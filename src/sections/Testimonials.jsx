@@ -2,17 +2,17 @@
 
 const testimonials = [
   {
-    name: "Cliente de restaurante",
+    name: "Patitas de Puerco Doña Imelda",
     role: "Menú digital",
     text: "El menú quedó moderno, rápido y fácil de actualizar. Nuestros clientes lo pueden consultar desde el celular sin complicaciones.",
   },
   {
-    name: "Negocio local",
+    name: "Black & Blade",
     role: "Página web",
     text: "Antonio entendió lo que necesitábamos y lo convirtió en una página clara, profesional y lista para recibir prospectos.",
   },
   {
-    name: "Equipo operativo",
+    name: "Agencia Travels",
     role: "Automatización",
     text: "El flujo automatizado nos ahorró tareas repetitivas y nos ayudó a dar seguimiento más rápido a los clientes.",
   },
